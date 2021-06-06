@@ -99,16 +99,29 @@ function paint(ev){
 
 function validation(GameBoardState){
     let rounwon = false
+    let p1 = 0
+    let p2 = 0
+    let p3 = 0
     for(let i = 0; i < WINNINGS.length; i++){
         const winconbination = WINNINGS[i]
+        p1 = winconbination[0]
+        p2 = winconbination[1]
+        p3 = winconbination[2]
         let position1 = GameBoardState[winconbination[0]]
         let position2 = GameBoardState[winconbination[1]]
         let position3 = GameBoardState[winconbination[2]]
         if (position1 == 'pt' && position2 == 'pt' && position3 == 'pt') {
+            
+            document.getElementById(p1).style.backgroundColor = 'coral';
+            document.getElementById(p2).style.backgroundColor = 'coral';
+            document.getElementById(p3).style.backgroundColor = 'coral';
             player = playerdos
             rounwon = true
             break
         }else if (position1 == 'po' && position2 == 'po' && position3 == 'po') {
+            document.getElementById(p1).style.backgroundColor = 'coral';
+            document.getElementById(p2).style.backgroundColor = 'coral';
+            document.getElementById(p3).style.backgroundColor = 'coral';
             player = playeruno
             rounwon = true
             break;
@@ -117,12 +130,20 @@ function validation(GameBoardState){
         }    
     }
     if(rounwon){
-        console.log(player.value)
         showmessage(WinMessage())
         GameActive = false
         return
     }
     if(!GameBoardState.includes("")){
+        document.getElementById("0").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("1").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("2").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("3").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("4").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("5").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("6").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("7").style.backgroundColor = 'cornflowerblue';
+        document.getElementById("8").style.backgroundColor = 'cornflowerblue';
         showmessage(DrawMessage())
         GameActive = false
         return
@@ -146,6 +167,15 @@ function listeners(){
 
 function RegisterPlayer(){
     GameActive = true
+    document.getElementById("0").removeAttribute('Style')
+    document.getElementById("1").removeAttribute('Style')
+    document.getElementById("2").removeAttribute('Style')
+    document.getElementById("3").removeAttribute('Style')
+    document.getElementById("4").removeAttribute('Style')
+    document.getElementById("5").removeAttribute('Style')
+    document.getElementById("6").removeAttribute('Style')
+    document.getElementById("7").removeAttribute('Style')
+    document.getElementById("8").removeAttribute('Style')
     eraseimg()
     if(gameboard.style.display == 'block'){
         RestartGameState()
@@ -159,6 +189,15 @@ function RegisterPlayer(){
 
 function RestartGame(){
     GameActive = true
+    document.getElementById("0").removeAttribute('Style')
+    document.getElementById("1").removeAttribute('Style')
+    document.getElementById("2").removeAttribute('Style')
+    document.getElementById("3").removeAttribute('Style')
+    document.getElementById("4").removeAttribute('Style')
+    document.getElementById("5").removeAttribute('Style')
+    document.getElementById("6").removeAttribute('Style')
+    document.getElementById("7").removeAttribute('Style')
+    document.getElementById("8").removeAttribute('Style')
     if(player == playeruno){
         player = playerdos
     } else {
