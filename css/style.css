@@ -7,6 +7,10 @@
     font-size: 20px;
 }
 
+.header-box buttongame{
+    font-size: 20px;
+}
+
 .input-nombre{
     font-size: 20px;
 }
@@ -77,6 +81,18 @@ a:hover{
     
 }
 
+.gameboard__container{
+    margin:0px auto;
+    border-radius: 48px;
+    border: 6px solid white;
+    color: white;
+    width: 400px;
+    padding: 71px 16px 71px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.1);
+    
+}
+
 .login__form{
     display:flex;
     flex-direction: column;
@@ -101,7 +117,35 @@ a:hover{
 ::placeholder{
     color:white;
 }
+.roww{
+    border-right-color: white;
+    border-right-width: 6px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-left-color: white;
+    border-left-width: 6px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}
+.coll{
+        border-right-color: white;
+        border-right-style: solid; 
+        border-right-width: 6px;
+        border-bottom-color: white;
 
+        border-bottom-width: 6px;
+        border-left-color: white;
+        border-left-width: 6px;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial
+}
 .button{
     border-radius: 25px;
     height: 40px;
@@ -113,6 +157,24 @@ a:hover{
     letter-spacing: 1px;
     border: 0px;
 }
+
+.buttongame{
+    border-radius: 25px;
+    height: 40px;
+    margin: 0px 0px;
+    background-color: rgba(255,255,255,0.3);
+    color:white;
+    font-size: 15px;
+    transition: 1000ms background-color;
+    letter-spacing: 1px;
+    border: 0px;
+}
+
+.buttongame:hover{
+    background-color: rgba(255,255,255,0.1);    
+    cursor:pointer;
+}
+
 
 .button:hover{
     background-color: rgba(255,255,255,0.1);    
@@ -191,7 +253,10 @@ a:hover{
 ::placeholder{
     color:white;
 }
-
+.casilla{
+    height: 12vh;
+    box-sizing: border-box;
+}
 .header{
     width: 100%;
     height: 80px;
@@ -271,7 +336,7 @@ img{
     padding-bottom:10px; 
 }
 .mb-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 0rem !important;
   }
 .col {
     -ms-flex-preferred-size: 0;
@@ -351,10 +416,15 @@ img{
     font-size: 12px;
 }
 
+.text-center-message{
+    text-align: center !important;
+    color:white;
+    font-size: small;
+}
+
 .text-center {
     text-align: center !important;
     color:white;
-
 }
 
 .py-4 {

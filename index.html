@@ -19,7 +19,7 @@
 </style>
 <body>
     <header class="header">
-        <h1 class="title text-center">PLAYER REGISTRATION</h1>
+        <h1 class="title text-center">TRIKI</h1>
     </header>
     <section class="page-section">
         <div class="container-fluid" style="height: 78vh;">
@@ -28,13 +28,37 @@
                 <img src="assets/jugadoruno.png" alt="">
             </div>
             <div class="col">
-                <div class="center">
+                <div id="gameboard" class="center" style="display: none;">
+                    <div class="gameboard__container">
+                        <div class="row mb-3">
+                            <div data-num ="0" id = "0" class="cero col roww coll casilla"></div>
+                            <div data-num ="1" id = "1" class="uno col roww coll casilla"></div>
+                            <div data-num ="2" id = "2" class="dos col roww  casilla"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div data-num ="3" id = "3" class="col roww coll casilla"></div>
+                            <div data-num ="4" id = "4" class="col roww coll casilla"></div>
+                            <div data-num ="5" id = "5" class="col roww casilla"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div data-num ="6" id = "6" class="col coll casilla"></div>
+                            <div data-num ="7" id = "7" class="col coll casilla"></div>
+                            <div data-num ="8" id = "8" class="col casilla"></div>
+                        </div>
+                    </div>
+                    <div class="text-center-message">
+                        <h2 class="MessageNotification"></h2>
+                    </div>
+                    <button class="GameRestart buttongame" id="GameRestart">Restart</button>   
+                    <button class="buttongame ChangePlayer" id="ChangePlayer">Change Player</button>   
+                </div>
+                <div class="center" id="PlayerRegister">
                     <div class="login__container ">
                         <h2>Players:</h2>
-                        <form class="login__form">
-                            <input type="text" class="input" placeholder="Player 1">
-                            <input type="text" class="input" placeholder="Player 2">
-                            <button class="button">Continue</button>              
+                        <form class="login__form"id = "form">
+                            <input type="text" id="playeruno" class="input" placeholder="Player 1">
+                            <input type="text" id="playerdos" class="input" placeholder="Player 2">
+                            <button class="button" type="submit">Continue</button>              
                         </form>
                     </div>
                 </div>
@@ -49,5 +73,6 @@
         <div class="copyright py-4 text-center container-fluid">
             <small>Copyright &copy; Javier Arevalo 2021-2022</small></div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
